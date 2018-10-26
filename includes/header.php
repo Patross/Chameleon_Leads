@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/footer.css">
     </head>
     <body>
         <header>
