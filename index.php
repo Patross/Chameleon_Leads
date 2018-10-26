@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
         <header>
@@ -14,4 +14,5 @@
 
         </footer>
     </body>
+    <script src="javascript/js.js"></script>
 </html>
