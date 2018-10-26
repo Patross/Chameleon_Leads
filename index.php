@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
     </head>
     <body>
         <header>
@@ -10,7 +11,7 @@
 
         </main>
         <footer>
-            
+
         </footer>
     </body>
 </html>
