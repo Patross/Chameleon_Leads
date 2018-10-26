@@ -1,15 +1,20 @@
 *{
-
+    margin: 0;
+    padding: 0;
 }
 
 header{
     background-color: #444444;
     height: 2em;
     font-size: 2em; 
-    color: #fff;
 }
-a :active{
-    color: #fff;
+a{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+a:visited{
+    color: #ffffff;
 }
 main{
 
