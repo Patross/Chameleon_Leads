@@ -8,7 +8,7 @@
         <header>
             <nav>
                 <a href="index.php">Home</a>
-                <a href="">Products</a>
-                <a href="">Contact Us</a>
+                <a href="products.php">Products</a>
+                <a href="contact.php">Contact Us</a>
             </nav>
         </header>
