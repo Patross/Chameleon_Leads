@@ -3,9 +3,14 @@
 }
 
 header{
-    background-color: #eeeeee;
+    background-color: #444444;
+    height: 2em;
+    font-size: 2em; 
+    color: #fff;
 }
-
+a :active{
+    color: #fff;
+}
 main{
 
 }
