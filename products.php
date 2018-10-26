@@ -1,11 +1,9 @@
-<?php    
+<?php 
     require_once("includes/header.php")
 ?>
 <main>
-    <div>
-        <h1>hi</h1>
-    </div>
+    
 </main>
-<?php    
+<?php 
     require_once("includes/footer.php")
 ?>
