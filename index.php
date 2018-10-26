@@ -5,7 +5,11 @@
     </head>
     <body>
         <header>
-
+            <nav>
+                <a href="index.php">Home</a>
+                <a href="">Products</a>
+                <a href="">Contact Us</a>
+            </nav>
         </header>
         <main>
 
