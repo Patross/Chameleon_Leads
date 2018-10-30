@@ -41,3 +41,11 @@ a{
 a:hover{
     opacity: 1;
 }
+
+#shopping{
+    position: relative;
+    margin-left: 85vw;
+}
+.hidden{
+    display: none;
+}
