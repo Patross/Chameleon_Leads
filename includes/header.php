@@ -9,7 +9,7 @@
     <body>
         <header>
             <nav>
-                <i class="fas fa-shopping-basket"></i>
+                <i class="fas fa-shopping-basket" id="btnShop"></i>
                 <a href="contact.php">Contact Us</a>
                 <a href="products.php">Products</a>
                 <a href="index.php">Home</a>
