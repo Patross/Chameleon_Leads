@@ -30,9 +30,6 @@ a{
     margin-right: 1.5vw;
     line-height: 2em;
 }
-/* :last-child{
-    margin-right: 1vw;
-} */
 i.fa-shopping-basket{
     color: white;
     float: right;
@@ -41,9 +38,9 @@ i.fa-shopping-basket{
 }
 #shopping{
     position: absolute;
-    margin-top: 2em;
-    color: #ffffff;
-    margin-left: 80vw
+    font-size: 0.75em;
+    margin-top: 3.5em;
+    margin-left: 85vw
 }
 .hidden{
     display: none;

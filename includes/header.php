@@ -15,6 +15,7 @@
                 <a href="index.php">Home</a>
             </nav>
             <div id="shopping" class="hidden"> 
-                <h1>Shopping Cart</h1>
+                <h1>Shopping Cart:</h1>
+                <a href="checkout.php">Check Out</a>
             </div>
         </header>
