@@ -12,6 +12,9 @@
             <a href="index.php">Home</a>
             <a href="products.php">Products</a>
             <a href="contact.php">Contact Us</a>
-            <i class="fas fa-shopping-basket"></i>
+            <i id="btnShop" class="fas fa-shopping-basket"></i>
         </nav>
+        <div id="shopping" class="hidden">
+            <h1>Shoppin Cart:</h1>
+        </div>
     </header>
