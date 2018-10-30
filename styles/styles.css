@@ -15,36 +15,3 @@ body{
 footer{
      margin-top: 2em; 
 }
-header{
-    background-color: #444444;
-    height: 2em;
-    width: 100vw;
-    font-size: 1.5em;
-    position: sticky;
-    top: 0;
-}
-a{
-    color: #ffffff;
-    text-decoration: none;
-    float: right;
-    margin-right: 1.5vw;
-    line-height: 2em;
-}
-i.fa-shopping-basket{
-    color: white;
-    float: right;
-    margin-right: 1.5vw;
-    line-height: 2em;
-}
-#shopping{
-    position: absolute;
-    font-size: 0.75em;
-    margin-top: 3.5em;
-    margin-left: 85vw
-}
-.hidden{
-    display: none;
-}
-a:visited{
-    color: #ffffff;
-}
