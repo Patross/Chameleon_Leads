@@ -39,9 +39,14 @@ i.fa-shopping-basket{
     margin-right: 1.5vw;
     line-height: 2em;
 }
-shopping{
-    color: #000;
-    font-size: 30px;
+#shopping{
+    position: absolute;
+    margin-top: 2em;
+    color: #ffffff;
+    margin-left: 80vw
+}
+.hidden{
+    display: none;
 }
 a:visited{
     color: #ffffff;

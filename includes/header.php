@@ -14,4 +14,7 @@
                 <a href="products.php">Products</a>
                 <a href="index.php">Home</a>
             </nav>
+            <div id="shopping" class="hidden"> 
+                <h1>Shopping Cart</h1>
+            </div>
         </header>
