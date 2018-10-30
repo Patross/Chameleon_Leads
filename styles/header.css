@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+
+header{
+
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: right;
+    padding: 1vh 1vw;
+}
+
+i{
+    font-size: 1.2em;
+    cursor: pointer;
+    opacity: 0.8;
+    color: white;
+    margin: 0 1.5vw;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+i:hover{
+    opacity: 1;
+}
+
+a{
+    font-size: 1.1em;
+    cursor: pointer;
+    opacity: 0.8;
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5vw;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+a:hover{
+    opacity: 1;
+}
