@@ -1,7 +1,6 @@
 <?php 
     require_once("includes/header.php")
 ?>
-<!DOCTYPE html>
 <main>
     <section class="product">
         <article class="img-container">
