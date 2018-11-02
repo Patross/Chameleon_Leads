@@ -29,7 +29,7 @@
                         <p class=" product-description">'.$row["description"].'</p>
                     </article>
                 </section>';
-}
+        }
     ?>
 </main>
 <?php 
