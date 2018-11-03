@@ -1,6 +1,6 @@
 <?php
 
-$db_host = "localhost";
+$db_host = "patrossdev.com";
 $db_user = "root";
 $db_pass = "secretrootpass";
 
@@ -23,14 +23,15 @@ try
 	id int not null primary key auto_increment,
     first_name varchar(255) not null,
     last_name varchar(255) not null,
-    username varchar(255) not null,
-    email varchar(255) not null
+    email varchar(255) not null,
+    password varchar(255) not null
     );");
 
     $conn->query("CREATE TABLE IF NOT EXISTS products(
 	id int not null primary key auto_increment,
     name varchar(255) not null,
-    description varchar(255) not null
+    description varchar(255) not null,
+    price decimal(6,2) not null
     );");
 
     $conn->query("CREATE TABLE IF NOT EXISTS images(
