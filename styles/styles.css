@@ -8,9 +8,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-position: center;
-    overflow: hidden;
+    background-attachment: fixed;
 }
 footer{
      margin-top: 2em; 
