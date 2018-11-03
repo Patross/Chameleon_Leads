@@ -1,5 +1,13 @@
 <?php
+session_start();
+    isset($_SESSION['u_id'])?header('Location: '.basename($_SESSION["lastpage"])):null;
     require_once("includes/header.php");
+
+        if(isset($_GET['login'])){
+            if($_GET['login'] == "success"){
+                header("Location: index.php");
+            }
+        }
 ?>
 
     <main>
@@ -10,6 +18,13 @@
             <button type="submit" name="submit" >submit</button>
 
         </form>
+        <?php
+        if(isset($_GET['login'])){
+            if($_GET['login'] == "nomatch"){
+                echo "Username or password is incorrect.";
+            }
+        }
+        ?>
     </main>
 
 <?php

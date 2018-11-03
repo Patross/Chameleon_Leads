@@ -1,5 +1,6 @@
 <?php
     require_once("dbh.inc.php");
+    session_start();
     $_SESSION["lastpage"] = basename($_SERVER["PHP_SELF"]);
 ?>
 <!DOCTYPE html>
@@ -19,8 +20,15 @@
             <a href="index.php">Home</a>
             <a href="products.php">Products</a>
             <a href="contact.php">Contact Us</a>
+            <?php if(!isset($_SESSION['u_id'])):?>
             <a href="login.php">Login</a>
             <a href="register.php">Register</a>
+            <?php endif; ?>
+            <?php if (isset($_SESSION['u_id'])):?>
+            <form action="includes/logout.inc.php" method="post">
+                <button type="submit" name="submit">Logout</button>
+            </form>
+            <?php endif; ?>
 
             <i id="btnShop" class="fas fa-shopping-basket"></i>
         </nav>
