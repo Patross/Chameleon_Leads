@@ -17,7 +17,7 @@
 
     <?php
         $sql = $conn->query("select * from products");
-        
+        //DISPLAY ALL LEADS
         foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
             echo '
                 <section class="product">

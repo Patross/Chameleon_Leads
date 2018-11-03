@@ -1,5 +1,6 @@
 <?php
     require_once("dbh.inc.php");
+    $_SESSION["lastpage"] = basename($_SERVER["PHP_SELF"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,6 +19,9 @@
             <a href="index.php">Home</a>
             <a href="products.php">Products</a>
             <a href="contact.php">Contact Us</a>
+            <a href="login.php">Login</a>
+            <a href="register.php">Register</a>
+
             <i id="btnShop" class="fas fa-shopping-basket"></i>
         </nav>
         <div id="shopping" class="hidden">
