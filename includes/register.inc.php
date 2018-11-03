@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
     $confirmPassword = htmlspecialchars($_POST['confirmPassword']);
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-    if (empty($firstname || empty($lastname) || empty($email) || empty($password) || empty($confirmPassword))) {
+    if (empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($confirmPassword)) {
         header("Location: ../register.php?register=empty");
     } else {
         //Everything filled out.
