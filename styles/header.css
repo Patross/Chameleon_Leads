@@ -43,8 +43,25 @@ a:hover{
 }
 
 #shopping{
-    position: relative;
-    margin-left: 85vw;
+    position: absolute;
+    margin-left: 80vw;
+    width: 20vw;
+    z-index: 2;
+    background: grey;
+}
+.shopImgs{
+    width: 10.8vw;
+    height: 10.8vh;
+}
+.shopRemove{
+    position: absolute;
+    float: right;
+    margin-left: 8vw;
+}
+.shopPrice{
+    position: absolute;
+    float: right;
+    margin-left: 15vw;
 }
 .hidden{
     display: none;
