@@ -27,6 +27,7 @@
                     <article class="product-container">
                         <h3 class="product-name">'.$row["name"].'</h3>
                         <p class=" product-description">'.$row["description"].'</p>
+                            <button class="AddToCart" id="'.$row["id"].'">Add to cart</button>
                     </article>
                 </section>';
         }
