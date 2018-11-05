@@ -40,7 +40,7 @@ $nonce = $result->paymentMethodNonce->nonce;
 <script>
 // Create a client.
 braintree.client.create({
-  authorization: <?php echo $gateway->clientToken()->generate(); ?>
+  authorization: <?php echo ($gateway->clientToken()->generate()); ?>// this causin problems
 }, function (clientErr, clientInstance) {
 
   // Stop if there was a problem creating the client.
@@ -98,26 +98,6 @@ braintree.client.create({
 
 });
 </script>
-
-
-  <!--<script src="https://js.braintreegateway.com/web/dropin/1.13.0/js/dropin.min.js"></script>
-  <div id="dropin-container"></div>
-  <button id="submit-button">Request payment method</button>
-  <script>
-    var button = document.querySelector('#submit-button');
-    var clientToken = "<?php echo($clientToken); ?>";
-    braintree.dropin.create({
-      authorization: clientToken,
-      container: '#dropin-container'
-    }, function (createErr, instance) {
-      button.addEventListener('click', function () {
-        instance.requestPaymentMethod(function (err, payload) {
-          // Submit payload.nonce to your server
-          console.log(payload.nonce);
-        });
-      });
-    });-->
-  </script>
 </main>
 <?php
     require_once("includes/footer.php")
