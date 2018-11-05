@@ -3,8 +3,8 @@
 
 
     require_once("vendor/braintree/braintree_php/lib/Braintree.php");
-    $result = $gateway->paymentMethodNonce()->create();
-$nonce = $result->paymentMethodNonce->nonce;
+//     $result = $gateway->paymentMethodNonce()->create();
+// $nonce = $result->paymentMethodNonce->nonce;
     $gateway = new Braintree_Gateway([
     'environment' => 'sandbox',
     'merchantId' => '973ztmw37rbwf78w',
@@ -40,7 +40,7 @@ $nonce = $result->paymentMethodNonce->nonce;
 <script>
 // Create a client.
 braintree.client.create({
-  authorization: <?php echo ($gateway->clientToken()->generate()); ?>// this causin problems
+  authorization: "sandbox_gys8gbc8_973ztmw37rbwf78w" // this causin problems
 }, function (clientErr, clientInstance) {
 
   // Stop if there was a problem creating the client.
@@ -66,12 +66,25 @@ braintree.client.create({
 
     // Set up PayPal with the checkout.js library
     paypal.Button.render({
-      env: 'sandbox', // or 'production'
+      env: 'sandbox', // or 'sandbox'
 
+      
       payment: function () {
         return paypalCheckoutInstance.createPayment({
-          // Your PayPal options here. For available options, see
-          // http://braintree.github.io/braintree-web/current/PayPalCheckout.html#createPayment
+          flow: 'checkout', // Required
+          amount: 10.00, // Required
+          currency: 'EUR' // Required
+          // enableShippingAddress: true,
+          // shippingAddressEditable: false,
+          // shippingAddressOverride: {
+          //   recipientName: 'Scruff McGruff',
+          //   line1: '1234 Main St.',
+          //   line2: 'Unit 1',
+          //   city: 'Chicago',
+          //   countryCode: 'US',
+          //   postalCode: '60652',
+          //   state: 'IL',
+          //   phone: '123.456.7890'
         });
       },
 
