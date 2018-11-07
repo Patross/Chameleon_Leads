@@ -1,6 +1,10 @@
 <?php
     session_start();
-    isset($_SESSION['u_id'])?header('Location: '.basename($_SESSION["lastpage"])):null;
+    if(isset($_SESSION['u_id']) && basename($_SESSION['lastpage']) == "register.php"){
+        header('Location: index.php');
+    }else{
+        header('Location: '.basename($_SESSION["lastpage"]));
+    }
     require_once("includes/header.php");
 ?>
 
