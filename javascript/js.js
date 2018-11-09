@@ -18,11 +18,17 @@ function ShopToggle(){
 ///
 ///ASSIGN EVENT LISTENER FOR EACH BUTTON WITH AddToCart CLASS
 ///
-
 var AddToCart = document.getElementsByClassName('AddToCart');
 for (i = 0; i < AddToCart.length; i++) {
     AddToCart[i].addEventListener('click', function(){
-        console.log(this.id);
-        console.log(window.pageYOffset);
+        // console.log(this.id);
+        // console.log(window.pageYOffset);
+        let itemID;
+        let timestamp;
+        
+        document.cookie = `itemid=${variable};expires=${timestamp}`;
+
+
+
     });
 }
