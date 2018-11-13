@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
     <link rel="stylesheet" href="styles/footer.css" type="text/css">
     
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- braintree -->
+    <script src="https://js.braintreegateway.com/js/braintree-2.31.0.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 
