@@ -27,7 +27,10 @@
                     <article class="product-container">
                         <h3 class="product-name">'.$row["name"].'</h3>
                         <p class=" product-description">'.$row["description"].'</p>
-                            <button class="AddToCart" id="'.$row["id"].'">Add to cart</button>
+                            <form action="includes/addToCart.inc.php" method="POST">
+                                <button name="submit" class="AddToCart">Add to cart</button>
+                                <input type="text" value="'.$row["id"].'" hidden=hidden />
+                            </form>
                     </article>
                 </section>';
         }
