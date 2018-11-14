@@ -40,11 +40,11 @@
         <div id="shopping" class="hidden">
             <h1>Shoppin Cart:</h1>
             <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
-            <p>...Name...</p>
-            <p>...Description...</p>
+            <p class="shopNames">...Name...</p>
+            <p class="shopDesc">...Description...</p>
             <button class="shopRemove">X</button>
             <p class="shopPrice">Price = </p>
-            <p>Total Price = </p>
+            <p class="shopTotal">Total Price = </p>
             <a href="checkout.php">Check Out</a>
         </div>
     </header>
