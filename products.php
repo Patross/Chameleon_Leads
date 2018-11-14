@@ -5,7 +5,7 @@
     <!--<section class="product">
         <article class="img-container">
             <img class="product-img" src="https://via.placeholder.com/1080" alt="lead image">
-            <!-- <p class="product-img">Some text (image)</p> -->
+            <p class="product-img">Some text (image)</p> -->
        <!-- </article>
         <article class="product-container">
             <h3 class="product-name">Lead number 1</h3>

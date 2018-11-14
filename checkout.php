@@ -21,7 +21,7 @@
             <label for="lastName" class="heading">Last Name</label><br>
             <input type="text" name="lastName" id="lastName"><br><br>
 
-            <label for="amount" class="heading">Amount (USD)</label><br>
+            <label for="amount" class="heading">Amount (GBP)</label><br>
             <input type="text" name="amount" id="amount"><br><br>
 
             <div id="dropin-container"></div>

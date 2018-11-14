@@ -7,6 +7,7 @@ $db_pass = "";
 try
 {
     $conn = new PDO('mysql:host=localhost;dbname=chameleon', $db_user, $db_pass);
+    // $conn = new PDO('mysql:host=localhost;', $db_user, $db_pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // $conn->query("create database if not exists chameleon;");
     // $conn->query("CREATE USER if not exists 'chameleon'@'%' IDENTIFIED BY 'chameleon-leads';");
