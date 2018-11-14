@@ -7,6 +7,7 @@ $db_pass = "";
 try
 {
     $conn = new PDO('mysql:host=localhost;dbname=chameleon', $db_user, $db_pass);
+    // $conn = new PDO('mysql:host=localhost;', $db_user, $db_pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // $conn->query("create database if not exists chameleon;");
     // $conn->query("CREATE USER if not exists 'chameleon'@'%' IDENTIFIED BY 'chameleon-leads';");
@@ -39,6 +40,14 @@ try
     path varchar(255) not null,
     product_id int not null,
     foreign key (product_id) references products(id)
+    );");
+
+    $conn->query("CREATE TABLE IF NOT EXISTS shopping_cart(
+	id int not null primary key auto_increment,
+    product_id int not null,
+    foreign key (product_id) references products(id),
+    user_id int not null,
+    foreign key (user_id) references users_id(id)
     );");
 }
 catch(PDOException $e)
