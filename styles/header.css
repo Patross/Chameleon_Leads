@@ -88,12 +88,21 @@ a:hover{
 .checkoutLink{
     all: unset;
     display: block;
+    width: 25%;
+    text-align: center;
     font-family: sans-serif;
     font-weight: bold;
     background-color: rgba(0, 0, 0, 0.15);
     padding: 1vh 0.3vw;
     margin: 0.5vh 0.5vw;
     border-radius: 5px;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(.77,.56,.09,.9);
+    cursor: pointer;
+}
+
+.checkoutLink:hover{
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 .hidden{
