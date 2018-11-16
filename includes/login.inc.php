@@ -15,7 +15,7 @@ if (!isset($_POST['submit'])) {
             $_SESSION['u_first'] = $result['first_name'];
             $_SESSION['u_last'] = $result['last_name'];
             $_SESSION['u_email'] = $result['email'];
-            header('Location: ../login.php?login=success');
+            header('Location: ../index.php?login=success');
         } else {
             header('Location: ../login.php?login=nomatch');
         }
