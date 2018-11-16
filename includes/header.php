@@ -32,10 +32,10 @@
             <?php if (isset($_SESSION['u_id'])):?>
             <form action="includes/logout.inc.php" method="post">
                 <button type="submit" name="submit">Logout</button>
+                <i id="btnShop" class="fas  fa-shopping-basket"></i>
             </form>
             <?php endif; ?>
 
-            <i id="btnShop" class="fas fa-shopping-basket"></i>
         </nav>
         <div id="shopping" class="hidden">
             <h1>Shoppin Cart:</h1>
