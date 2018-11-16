@@ -55,6 +55,7 @@
                     <button class="shopRemove">
                     <form action="includes/deleteFromCart.inc.php" method="POST">
                         <input type="submit" name="submit" value="Remove from cart"></input>
+                        <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden> </input>
 
                     </form>
                     </button>

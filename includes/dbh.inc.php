@@ -43,7 +43,8 @@ $db_pass = "";
     product_id int not null,
     foreign key (product_id) references products(id),
     user_id int not null,
-    foreign key (user_id) references users(id)
+    foreign key (user_id) references users(id),
+    amount int not null;
     );");
 }
 catch(PDOException $e)
