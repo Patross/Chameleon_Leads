@@ -27,9 +27,15 @@
                     <article class="product-container">
                         <h3 class="product-name">'.$row["name"].'</h3>
                         <p class=" product-description">'.$row["description"].'</p>
-                            <form action="includes/addToCart.inc.php" method="POST">
+                            <form action="includes/addToCart.inc.php" method="POST">';
+                            if(isset($_SESSION['u_id'])){
+                                echo'
                                 <button name="submit" class="AddToCart">Add to cart</button>
-                                <input type="text" name="itemid" value="'.$row["id"].'" hidden=hidden />
+                                <input type="text" name="itemid" value="'.$row["id"].'" hidden=hidden />';
+                            }else{
+                                echo'<a href="login.php"><button>Add to cart</button></a>';
+                            }
+                            echo'
                             </form>';
                             if(isset($_GET["added"])&&$_GET["added"]=="true"&&$row['id']==$_GET['itemid']){
                                 echo "<span class=\"added\">item added to cart</span>";
