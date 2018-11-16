@@ -30,8 +30,11 @@
                             <form action="includes/addToCart.inc.php" method="POST">
                                 <button name="submit" class="AddToCart">Add to cart</button>
                                 <input type="text" name="itemid" value="'.$row["id"].'" hidden=hidden />
-                            </form>
-                    </article>
+                            </form>';
+                            if(isset($_GET["added"])&&$_GET["added"]=="true"&&$row['id']==$_GET['itemid']){
+                                echo "<span class=\"added\">item added to cart</span>";
+                            }
+                    echo '</article>
                 </section>';
         }
     ?>
