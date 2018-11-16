@@ -1,7 +1,7 @@
 <?php
- $db_host = "patrossdev";
+ $db_host = "localhost";
 $db_user = "root";
-$db_pass = "secretrootpass";
+$db_pass = "";
  try
 {
     $conn = new PDO("mysql:host={$db_host};",$db_user,$db_pass);
@@ -43,7 +43,7 @@ $db_pass = "secretrootpass";
     product_id int not null,
     foreign key (product_id) references products(id),
     user_id int not null,
-    foreign key (user_id) references users_id(id)
+    foreign key (user_id) references users(id)
     );");
 }
 catch(PDOException $e)
