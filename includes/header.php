@@ -50,8 +50,8 @@
                 foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
                     echo '
                     <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
-                    <p class="shopNames">'.$row['name'].'</p>
-                    <p class="shopDesc">'.$row['description'].'</p>
+                    <p class="shopNames">Product Name:'.$row['name'].'</p>
+                    <p class="shopDesc">Description'.$row['description'].'</p>
                     <button class="shopRemove">
                     <form action="includes/deleteFromCart.inc.php" method="POST">
                         <input type="submit" name="submit" value="Remove from cart"></input>
