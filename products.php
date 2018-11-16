@@ -26,11 +26,19 @@
                     </article>
                     <article class="product-container">
                         <h3 class="product-name">'.$row["name"].'</h3>
-                        <p class=" product-description">'.$row["description"].'</p>
-                            <form action="includes/addToCart.inc.php" method="POST">
+                        <p class=" product-description">'.$row["description"].'</p>';
+                            if(isset($_SESSION['u_id'])){
+                                echo'
+                                <form action="includes/addToCart.inc.php" method="POST">
                                 <button name="submit" class="AddToCart">Add to cart</button>
                                 <input type="text" name="itemid" value="'.$row["id"].'" hidden=hidden />
-                            </form>';
+                                </form>';
+                            }else{
+                                echo'
+                                <form action="login.php" method="POST">
+                                <button name="submit" class="AddToCart">Add to cart</button>
+                                </form>';
+                            }
                             if(isset($_GET["added"])&&$_GET["added"]=="true"&&$row['id']==$_GET['itemid']){
                                 echo "<span class=\"added\">item added to cart</span>";
                             }

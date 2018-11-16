@@ -32,10 +32,10 @@
             <?php if (isset($_SESSION['u_id'])):?>
             <form action="includes/logout.inc.php" method="post">
                 <button type="submit" name="submit">Logout</button>
+                <i id="btnShop" class="fas  fa-shopping-basket"></i>
             </form>
             <?php endif; ?>
 
-            <i id="btnShop" class="fas fa-shopping-basket"></i>
         </nav>
         <div id="shopping" class="hidden">
             <h1>Shoppin Cart:</h1>
@@ -50,9 +50,14 @@
                 foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
                     echo '
                     <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
+<<<<<<< HEAD
                     <p class="shopNames">'.$row['name'].'</p>
                     <p class="shopDesc">'.$row['description'].'</p>
                     <p>Amount: '.$rowProducts["amount"].'</p>
+=======
+                    <p class="shopNames">Product Name:'.$row['name'].'</p>
+                    <p class="shopDesc">Description'.$row['description'].'</p>
+>>>>>>> 8f1b11a05f792613e0cf2a9fde2a1dd3cd506cf5
                     <button class="shopRemove">
                     <form action="includes/deleteFromCart.inc.php" method="POST">
                         <input type="submit" name="submit" value="Remove from cart"></input>

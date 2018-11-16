@@ -1,5 +1,9 @@
 <?php
     require_once("includes/header.php");
+    $sql = $conn->query("select * from products");
+    if(isset($_SESSION['u_id'])){
+        header("Location: login.php");
+    }
 ?>
     <main>
         <script>
