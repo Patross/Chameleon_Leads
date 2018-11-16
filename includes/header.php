@@ -10,7 +10,7 @@
     <link type="text/css" rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/styles.css" type="text/css">
     <link rel="stylesheet" href="styles/footer.css" type="text/css">
-    
+
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -38,8 +38,8 @@
             <i id="btnShop" class="fas fa-shopping-basket"></i>
         </nav>
         <div id="shopping" class="hidden">
-        <h1>Shoppin Cart:</h1>
-        <?php
+            <h1>Shoppin Cart:</h1>
+            <?php
         if(isset($_SESSION['u_id'])){
 
             $sql = $conn->query('select * from shopping_cart where user_id='.$_SESSION['u_id']);
@@ -64,19 +64,6 @@
         }
             ?>
             <p class="shopTotal">Total Price = </p>
-            <?php
-                $sql = $conn->query("select * from shopping_cart");
-                //DISPLAY ALL LEADS IN SHOPPING CART
-                foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
-                    echo `
-                    <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
-                    <p class="shopNames">...Name...</p>
-                    <p class="shopDesc">...Description...</p>
-                    <button class="shopRemove">X</button>
-                    <p class="shopPrice">Price = </p>
-                    <p class="shopTotal">Total Price = </p>`;
-                }
-            ?>
             <a href="checkout.php">Check Out</a>
         </div>
     </header>
