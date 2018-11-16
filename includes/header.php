@@ -45,6 +45,19 @@
             <button class="shopRemove">X</button>
             <p class="shopPrice">Price = </p>
             <p class="shopTotal">Total Price = </p>
+            <?php
+                $sql = $conn->query("select * from shopping_cart");
+                //DISPLAY ALL LEADS IN SHOPPING CART
+                foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
+                    echo `
+                    <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
+                    <p class="shopNames">...Name...</p>
+                    <p class="shopDesc">...Description...</p>
+                    <button class="shopRemove">X</button>
+                    <p class="shopPrice">Price = </p>
+                    <p class="shopTotal">Total Price = </p>`;
+                }
+            ?>
             <a href="checkout.php">Check Out</a>
         </div>
     </header>
