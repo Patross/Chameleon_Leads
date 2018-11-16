@@ -43,26 +43,29 @@ a:hover{
 }
 
 #shopping{
-    position: absolute;
-    margin-left: 80vw;
-    width: 20vw;
-    z-index: 2;
-    background: grey;
+    background-color: red;
 }
+
 .shopImgs{
-    width: 10.8vw;
-    height: 10.8vh;
+    background-color: yellow;
 }
+
 .shopRemove{
-    position: absolute;
-    float: right;
-    margin-left: 8vw;
+    background-color: green;
 }
 .shopPrice{
-    position: absolute;
-    float: right;
-    margin-left: 15vw;
+    background-color: blue;
 }
+
+.shopTotal{
+    background-color: limegreen;
+}
+
+.checkoutLink{
+    all: unset;
+    background-color: lightblue;
+}
+
 .hidden{
     display: none;
 }

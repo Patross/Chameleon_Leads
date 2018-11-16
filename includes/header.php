@@ -64,6 +64,6 @@
         }
             ?>
             <p class="shopTotal">Total Price = </p>
-            <a href="checkout.php">Check Out</a>
+            <a class="checkoutLink" href="checkout.php">Check Out</a>
         </div>
     </header>
