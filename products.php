@@ -29,7 +29,7 @@
                         <p class=" product-description">'.$row["description"].'</p>
                             <form action="includes/addToCart.inc.php" method="POST">
                                 <button name="submit" class="AddToCart">Add to cart</button>
-                                <input type="text" value="'.$row["id"].'" hidden=hidden />
+                                <input type="text" name="itemid" value="'.$row["id"].'" hidden=hidden />
                             </form>
                     </article>
                 </section>';

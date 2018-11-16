@@ -38,12 +38,31 @@
             <i id="btnShop" class="fas fa-shopping-basket"></i>
         </nav>
         <div id="shopping" class="hidden">
-            <h1>Shoppin Cart:</h1>
-            <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
-            <p class="shopNames">...Name...</p>
-            <p class="shopDesc">...Description...</p>
-            <button class="shopRemove">X</button>
-            <p class="shopPrice">Price = </p>
+        <h1>Shoppin Cart:</h1>
+        <?php
+        if(isset($_SESSION['u_id'])){
+
+            $sql = $conn->query('select * from shopping_cart where user_id='.$_SESSION['u_id']);
+            foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
+
+                $sql = $conn->query('select * from products where id='.$row['product_id']);
+                //DISPLAY ALL SHOPPING CART ITEMS
+                foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
+                    echo '
+                    <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
+                    <p class="shopNames">'.$row['name'].'</p>
+                    <p class="shopDesc">'.$row['description'].'</p>
+                    <button class="shopRemove">
+                    <form action="includes/deleteFromCart.inc.php" method="POST">
+                        <input type="submit" name="submit" value="Remove from cart"></input>
+
+                    </form>
+                    </button>
+                    <p class="shopPrice">Price = '.$row['price'].'</p>';
+                }   
+            }
+        }
+            ?>
             <p class="shopTotal">Total Price = </p>
             <?php
                 $sql = $conn->query("select * from shopping_cart");
