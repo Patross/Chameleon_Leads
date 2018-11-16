@@ -1,3 +1,7 @@
+*{
+
+}
+
 body{
     margin: 0;
 }
@@ -43,27 +47,53 @@ a:hover{
 }
 
 #shopping{
-    background-color: red;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 1vh 0.5vw;
+    margin-left: 59vw;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 1vh;
+    margin-right: 1vw;
+    border-radius: 5px;
+}
+
+#shopping h1{
+    font-family: sans-serif;
+    text-shadow: 1px 1px 1px black;
 }
 
 .shopImgs{
     background-color: yellow;
+    padding: 5px;
 }
 
 .shopRemove{
-    background-color: green;
+
+
 }
 .shopPrice{
     background-color: blue;
 }
 
 .shopTotal{
-    background-color: limegreen;
+    display: block;
+    padding: 1vh 0.3vw;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin: 0.5vh 0.5vw;
+    border-radius: 5px;
 }
 
 .checkoutLink{
     all: unset;
-    background-color: lightblue;
+    display: block;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 1vh 0.3vw;
+    margin: 0.5vh 0.5vw;
+    border-radius: 5px;
 }
 
 .hidden{
