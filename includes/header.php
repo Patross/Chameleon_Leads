@@ -35,6 +35,11 @@
                 <i id="btnShop" class="fas  fa-shopping-basket"></i>
             </form>
             <?php endif; ?>
+            <?php if (isset($_SESSION["u_email"])&&$_SESSION['u_email']=="admin@admin.admin"):?>
+                <a href="adminPanel.php">Admin Panel<a>
+            <?php endif; ?>
+
+
 
         </nav>
         <div id="shopping" class="hidden">
