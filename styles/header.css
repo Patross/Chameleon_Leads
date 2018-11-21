@@ -30,7 +30,7 @@ i:hover{
     opacity: 1;
 }
 
-a{
+nav a{
     font-size: 1.1em;
     cursor: pointer;
     opacity: 0.8;
@@ -44,6 +44,27 @@ a{
 
 a:hover{
     opacity: 1;
+}
+
+nav button{
+    all: unset;
+    font-size: 1.1em;
+    cursor: pointer;
+    opacity: 0.8;
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5vw;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+nav button:hover{
+    opacity: 1;
+}
+
+form{
+    all: unset;
 }
 
 #shopping{
