@@ -27,8 +27,5 @@ for (i = 0; i < AddToCart.length; i++) {
         let timestamp;
         
         document.cookie = `itemid=${variable};expires=${timestamp}`;
-
-
-
     });
 }
