@@ -9,23 +9,23 @@
         }
 ?>
 
-    <main>
-        <form action="includes/login.inc.php" method="POST">
+<main>
+    <form id="loginForm" action="includes/login.inc.php" method="POST">
 
-            <input type="email" name="email"  placeholder="email"></br></br>
-            <input type="password" name="password" placeholder="password"></br></br>
-            <a href="register.php">Create an Account</a>
-            <button type="submit" name="submit" >submit</button>
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password">
+        <a href="register.php">Create an Account</a>
+        <button type="submit" name="submit">submit</button>
 
-        </form>
-        <?php
+    </form>
+    <?php
         if(isset($_GET['login'])){
             if($_GET['login'] == "nomatch"){
                 echo "Username or password is incorrect.";
             }
         }
         ?>
-    </main>
+</main>
 
 <?php
     require_once("includes/footer.php");
