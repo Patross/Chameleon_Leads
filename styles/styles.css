@@ -61,4 +61,7 @@ footer{
     padding: 1%;
 }
 
-#
+#loginForm{
+    background-color: red;
+    padding: 5px;
+}
