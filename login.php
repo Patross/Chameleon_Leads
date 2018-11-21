@@ -1,5 +1,4 @@
 <?php
-session_start();
     isset($_SESSION['u_id'])?header('Location: '.basename($_SESSION["lastpage"])):null;
     require_once("includes/header.php");
 
@@ -15,6 +14,7 @@ session_start();
 
             <input type="email" name="email"  placeholder="email"></br></br>
             <input type="password" name="password" placeholder="password"></br></br>
+            <a href="register.php">Create an Account</a>
             <button type="submit" name="submit" >submit</button>
 
         </form>
