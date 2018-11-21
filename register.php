@@ -1,7 +1,6 @@
 <?php
-    session_start();
-    isset($_SESSION['u_id'])?header('Location: '.basename($_SESSION["lastpage"])):null;
     require_once("includes/header.php");
+    isset($_SESSION['u_id'])?header('Location: '.basename($_SESSION["lastpage"])):null;
 
         if(isset($_GET['register'])){
             if($_GET['register'] == "success"){
