@@ -40,29 +40,29 @@
         <div id="shopping" class="hidden">
             <h1>Shoppin Cart:</h1>
             <?php
-        if(isset($_SESSION['u_id'])){
+                if(isset($_SESSION['u_id'])){
 
-            $sql = $conn->query('select * from shopping_cart where user_id='.$_SESSION['u_id']);
-            foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $rowProducts) {
+                    $sql = $conn->query('select * from shopping_cart where user_id='.$_SESSION['u_id']);
+                    foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $rowProducts) {
 
                 $sql = $conn->query('select * from products where id='.$rowProducts['product_id']);
                 //DISPLAY ALL SHOPPING CART ITEMS
                 foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
                     echo '
                     <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
-                    <p class="shopNames">Product Name: '.$row['name'].'</p>
-                    <p class="shopDesc">Description: '.$row['description'].'</p>
+                    <p class="shopNames">Product Name'.$row['name'].'</p>
+                    <p class="shopDesc">Description'.$row['description'].'</p>
                     <p>Amount: '.$rowProducts["amount"].'</p>
-                    <button class="shopRemove">
-                    <form action="includes/deleteFromCart.inc.php" method="POST">
-                        <input type="submit" name="submit" value="Remove from cart"></input>
+                    <form id="formHolder" action="includes/deleteFromCart.inc.php" method="POST">
+                        <input class="shopRemove" type="submit" name="submit" value="Remove from cart"></input>
                         <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden> </input>
-                    </form>
-                    </button>
-                    <p class="shopPrice">Price = '.$row['price'].'</p>';
-                }   
-            }
-        }
+
+                            </form>
+                            </button>
+                            <p class="shopPrice">Price = '.$row['price'].'</p>';
+                        }   
+                    }
+                }
             ?>
             <p class="shopTotal">Total Price = </p>
             <a class="checkoutLink" href="checkout.php">Check Out</a>
