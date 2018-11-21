@@ -45,19 +45,6 @@
                     $sql = $conn->query('select * from shopping_cart where user_id='.$_SESSION['u_id']);
                     foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $rowProducts) {
 
-<<<<<<< HEAD
-                        $sql = $conn->query('select * from products where id='.$rowProducts['product_id']);
-                        //DISPLAY ALL SHOPPING CART ITEMS
-                        foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
-                            echo '
-                            <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
-                            <p class="shopNames">Product Name'.$row['name'].'</p>
-                            <p class="shopDesc">Description'.$row['description'].'</p>
-                            <p>Amount: '.$rowProducts["amount"].'</p>
-                            <form action="includes/deleteFromCart.inc.php" method="POST">
-                                <input type="submit" name="submit" value="Remove from cart"></input>
-                                <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden> </input>
-=======
                 $sql = $conn->query('select * from products where id='.$rowProducts['product_id']);
                 //DISPLAY ALL SHOPPING CART ITEMS
                 foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
@@ -69,7 +56,6 @@
                     <form id="formHolder" action="includes/deleteFromCart.inc.php" method="POST">
                         <input class="shopRemove" type="submit" name="submit" value="Remove from cart"></input>
                         <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden> </input>
->>>>>>> 5874e20cd7ce3d03e3a11b1a459798921153488b
 
                             </form>
                             </button>

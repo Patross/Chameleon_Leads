@@ -19,6 +19,7 @@ if(isset($_POST["submit"])){
             $newCount++;
     
             $query = $conn->query("UPDATE shopping_cart SET `amount`=(`amount`+1) WHERE `user_id` = '{$_SESSION['u_id']}' AND product_id ='{$_POST['itemid']}';");
+            header("Location: ../".$_SESSION["lastpage"]."?added=true&itemid=".$_POST['itemid']);
         }else{
             ///
             ///ITEM DOESNT EXIST IN THE SHOPPING CART YET 
