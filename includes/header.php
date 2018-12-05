@@ -22,7 +22,7 @@
 <body>
     <header>
         <nav>
-        <!-- <a><img src="img/logo.svg" alt="logo"/></a> -->
+        <!-- <a><img src="img/logo.png" alt="logo"/></a> -->
             <a href="index.php">Home</a>
             <a href="products.php">Products</a>
             <a href="contact.php">Contact Us</a>

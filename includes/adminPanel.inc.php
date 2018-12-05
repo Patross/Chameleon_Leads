@@ -3,7 +3,7 @@
 
  require_once("dbh.inc.php");
     $target_dir = "../img/products/";
-    $target_file = $target_dir . basename($_FILES["Image"]["name"]);
+    $target_file = $target_dir . //productIDhere);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     // Check if image file is a actual image or fake image
@@ -27,4 +27,9 @@
     $result = $query->fetch(PDO::FETCH_ASSOC);
     $productid = $result["id"];
     $fileName = $_FILES["Image"]["name"];
-    $conn->query("insert into images(path,product_id) values('{$fileName}',{$productid})");
+    $path = "img/products/";
+    if (!file_exists($path)) {
+        mkdir($path, 0777, true);
+    }
+    $filePath = $path+$fileName;
+    $conn->query("insert into images(path,product_id) values('{$filePath}',{$productid})");
