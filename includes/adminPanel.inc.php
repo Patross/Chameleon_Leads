@@ -26,10 +26,10 @@
 
     $result = $query->fetch(PDO::FETCH_ASSOC);
     $productid = $result["id"];
-    $fileName = $_FILES["Image"]["name"];
+    $fileName = $_POST['ItemName'];
     $path = "img/products/";
     if (!file_exists($path)) {
         mkdir($path, 0777, true);
     }
-    $filePath = $path+$fileName;
+    $filePath = $path.$fileName;
     $conn->query("insert into images(path,product_id) values('{$filePath}',{$productid})");
