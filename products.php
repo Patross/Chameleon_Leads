@@ -22,7 +22,15 @@
             echo '
                 <section class="product">
                     <article class="img-container">
-                        <img class="product-img" src="https://via.placeholder.com/1080" alt="lead image">
+                        <img class="product-img" src="';
+                        
+                        $query = $conn->query("SELECT `path` FROM images WHERE product_id=$row['id']");
+
+                        $result =  $query->fetch(PDO::FETCH_ASSOC);
+
+                        echo $result["path"];
+
+                        echo " alt="lead image">
                     </article>
                     <article class="product-container">
                         <h3 class="product-name">'.$row["name"].'</h3>
