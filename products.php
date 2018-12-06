@@ -24,17 +24,19 @@
                     <article class="img-container">
                         <img class="product-img" src="';
                         
-                        $query = $conn->query("SELECT `path` FROM images WHERE product_id=$row['id']");
+                        $query = $conn->query("SELECT image_path FROM images where product_id = {$row['id']}");
 
-                        $result =  $query->fetch(PDO::FETCH_ASSOC);
+                        $result = $query->fetch(PDO::FETCH_ASSOC);
 
-                        echo $result["path"];
-
-                        echo " alt="lead image">
+                        echo $result["image_path"];
+                        // https://via.placeholder.com/1080"
+                        
+                        echo '" alt="lead image">
                     </article>
                     <article class="product-container">
                         <h3 class="product-name">'.$row["name"].'</h3>
                         <p class=" product-description">'.$row["description"].'</p>';
+
                             if(isset($_SESSION['u_id'])){
                                 echo'
                                 <form action="includes/addToCart.inc.php" method="POST">
@@ -50,6 +52,7 @@
                             if(isset($_GET["added"])&&$_GET["added"]=="true"&&$row['id']==$_GET['itemid']){
                                 echo "<span class=\"added\">item added to cart</span>";
                             }
+
                     echo '</article>
                 </section>';
         }

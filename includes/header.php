@@ -55,7 +55,15 @@
                 //DISPLAY ALL SHOPPING CART ITEMS
                 foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
                     echo '
-                    <img class="shopImgs" src="https://via.placeholder.com/1080" alt="lead">
+                    <img class="shopImgs" src="';
+                    
+                    $query = $conn->query("SELECT image_path FROM images where product_id = {$row['id']}");
+
+                    $result = $query->fetch(PDO::FETCH_ASSOC);
+
+                    echo $result["image_path"];
+                    
+                    echo '" alt="lead">
                     <p class="shopNames">Product Name'.$row['name'].'</p>
                     <p class="shopDesc">Description'.$row['description'].'</p>
                     <p>Amount: '.$rowProducts["amount"].'</p>
