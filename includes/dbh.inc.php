@@ -46,6 +46,12 @@ $db_pass = "";
     foreign key (user_id) references users(id),
     amount int not null
     );");
+
+    $conn->query("CREATE TABLE IF NOT EXISTS qa(
+    id int not null primary key auto_increment,
+    question varchar(255) not null,
+    answer varchar(255) not null
+    );");
 }
 catch(PDOException $e)
 {
