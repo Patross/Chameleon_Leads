@@ -50,6 +50,8 @@ $db_pass = "";
     $conn->query("CREATE TABLE IF NOT EXISTS qa(
     id int not null primary key auto_increment,
     question varchar(255) not null,
+    user_id int not null,
+    FOREIGN KEY (user_id) REFERENCES users(id),
     answer varchar(255) not null
     );");
 }
