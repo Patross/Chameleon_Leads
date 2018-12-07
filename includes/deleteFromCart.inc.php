@@ -14,6 +14,6 @@ if(isset($_POST['submit'])){
         echo'<script type="text/javascript" href=../javascript/js.js>
             ShopToggle();
             </script>';
+        }
         header("Location: ../".$_SESSION["lastpage"]);
-    }
 }
