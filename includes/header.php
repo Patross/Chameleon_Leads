@@ -64,8 +64,8 @@
                     echo $result["image_path"];
                     
                     echo '" alt="lead">
-                    <p class="shopNames">Product Name'.$row['name'].'</p>
-                    <p class="shopDesc">Description'.$row['description'].'</p>
+                    <p class="shopNames">Product Name: '.$row['name'].'</p>
+                    <p class="shopDesc">Description: '.$row['description'].'</p>
                     <p>Amount: '.$rowProducts["amount"].'</p>
                     <form id="formHolder" action="includes/deleteFromCart.inc.php" method="POST">
                         <input class="shopRemove" type="submit" name="submit" value="Remove from cart"></input>
