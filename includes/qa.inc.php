@@ -8,7 +8,7 @@ if (!isset($_POST['submit'])) {
     if(empty($question)){
         header("Location: ../contact.php");
     } else {
-        $conn->query("INSERT INTO `chameleon`.`qa` (`id`, `question`, `answer`) VALUES (NULL, '$question', '');");
+        $conn->query("INSERT INTO `qa` (`question`,`user_id`, `answer`) VALUES ('$question', {$_SESSION['u_id']}, '');");
         header("Location: ../contact.php");
     }
 }
