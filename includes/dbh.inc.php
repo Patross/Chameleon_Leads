@@ -33,7 +33,7 @@ $db_pass = "";
 
     $conn->query("CREATE TABLE IF NOT EXISTS images(
 	id int not null primary key auto_increment,
-    path varchar(255) not null,
+    image_path varchar(255) not null,
     product_id int not null,
     foreign key (product_id) references products(id)
     );");
