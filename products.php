@@ -18,7 +18,6 @@
     <?php
     if($_GET["popout"]=="true"){
         echo '<script>
-
                 document.getElementById("shopping").removeAttribute("class","hidden");</script>';
     }
         $sql = $conn->query("select * from products");
