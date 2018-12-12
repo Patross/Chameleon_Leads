@@ -55,7 +55,7 @@
                             }
                                     if(isset($_SESSION['u_email']) && $_SESSION['u_email'] == "admin@admin.admin"){
                                         echo '<form action="includes/deleteProduct.inc.php" method="POST">
-                                        <input type="button" name="button" value="Remove Product From Database"></input>
+                                        <input class="AddToCart" type="button" name="button" value="Remove Product From Database"></input>
                                         <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden></input>
                                             </form>';
                                     }
