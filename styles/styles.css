@@ -36,8 +36,9 @@ footer{
 
 .product-img{
     border-radius: 10px;
-    width: 20vw;
-    height: 20vh;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .product-container{
@@ -48,18 +49,35 @@ footer{
 .product-name{
     font-family: sans-serif;
     font-size: 3vmin;
-    color: black;
-    opacity: 0.4;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+
 }
 
 .product-description{
     font-family: sans-serif;
-    font-size: 2vmin;
-    margin-top: 1%;
+    font-size: 1em;
+    margin-top: 2%;
     height: auto;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 1%;
+}
+
+.AddToCart{
+    all: unset;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 2%;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    padding: 0.3vh 0.3vw;
+    transition: 0.15s linear;
+}
+
+.AddToCart:hover{
+    text-shadow: 2px 2px 2px black;
 }
 
 #loginForm{
