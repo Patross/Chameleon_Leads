@@ -9,7 +9,7 @@ if (!isset($_POST['submit'])) {
     if(empty($answer)){
         header("Location: ../contact.php");
     } else {
-        $conn->query("INSERT INTO `qa` (`question`,`user_id`, `answer`) VALUES ('$question', {$_SESSION['u_id']}, '$answer');");
+        $conn->query("UPDATE `qa` SET `answer` = '$answer' WHERE `question` = '$question';");
         header("Location: ../contact.php");
     }
 }
