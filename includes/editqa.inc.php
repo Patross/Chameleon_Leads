@@ -9,7 +9,7 @@ if (!isset($_POST['submit'])) {
     if(empty($answer)){
         header("Location: ../contact.php");
     } else {
-        $conn->query("UPDATE `qa` SET `answer` = '$answer' WHERE `question` = $question;");
-        header("Location: ../index.php");
+        $conn->query("UPDATE `qa` SET `answer` = '$answer' WHERE `question` = '$question';");
+        header("Location: ../contact.php");
     }
 }
