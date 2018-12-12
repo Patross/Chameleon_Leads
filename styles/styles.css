@@ -30,13 +30,14 @@ footer{
 .img-container{
     float: left;
     width: 25%;
-    overflow: hidden;
     margin-right: 2.5%;
+    text-align: center;
 }
 
 .product-img{
     border-radius: 10px;
-    width: 100%;
+    width: 20vw;
+    height: 20vh;
 }
 
 .product-container{

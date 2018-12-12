@@ -16,11 +16,6 @@
     </section>-->
 
     <?php
-    if($_GET["popout"]=="true"){
-        echo '<script>
-
-                document.getElementById("shopping").removeAttribute("class","hidden");</script>';
-    }
         $sql = $conn->query("select * from products");
         //DISPLAY ALL LEADS
         foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
@@ -54,18 +49,17 @@
                                 <button name="submit" class="AddToCart">Add to cart</button>
                                 </form>';
                             }
+                                    if(isset($_SESSION['u_email']) && $_SESSION['u_email'] == "admin@admin.admin"){
+                                        echo '<form action="includes/deleteProduct.inc.php" method="POST">
+                                        <input type="button" name="button" value="Remove Product From Database"></input>
+                                        <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden></input>
+                                            </form>';
+                                    }
                             if(isset($_GET["added"])&&$_GET["added"]=="true"&&$row['id']==$_GET['itemid']){
                                 echo "<span class=\"added\">item added to cart</span>";
                             }
 
                     echo '</article>';
-
-                    if(isset($_SESSION['u_email']) && $_SESSION['u_email'] == "admin@admin.admin"){
-                        echo '<form action="includes/deleteProduct.inc.php" method="POST">
-                        <input type="button" name="button" value="Remove Product From Database"></input>
-                        <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden></input>
-                            </form>';
-                    }
 
 
                 echo '</section>';
