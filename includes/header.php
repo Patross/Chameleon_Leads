@@ -25,6 +25,7 @@
            <a><img src="img/logo.png"></a>
             <a href="index.php">Home</a>
             <a href="products.php">Products</a>
+            <a href="gallery.php">Gallery</a>
             <a href="contact.php">Contact Us</a>
             <?php if(!isset($_SESSION['u_id'])):?>
             <a href="login.php">Login</a>
