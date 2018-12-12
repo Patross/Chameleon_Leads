@@ -161,7 +161,15 @@ form{
     margin: 1vh 0;
 }
 
-
+nav a img{
+    position: absolute;
+    height: 10%;
+    right: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: -2.5vh;
+}
 
 .hidden{
     display: none;
