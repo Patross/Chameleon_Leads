@@ -16,7 +16,7 @@
     </section>-->
 
     <?php
-    if($_GET["popout"]=="true"){
+    if(isset($_GET["popout"]) && $_GET["popout"]=="true"){
         echo '<script>
                 document.getElementById("shopping").removeAttribute("class","hidden");</script>';
     }
