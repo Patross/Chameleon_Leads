@@ -1,7 +1,7 @@
 <?php
  $db_host = "localhost";
 $db_user = "root";
-$db_pass = "root";
+$db_pass = "";
  try
 {
     $conn = new PDO("mysql:host={$db_host};dbname=chameleon",$db_user,$db_pass);

@@ -1,6 +1,20 @@
 /* line 2, I:/_Programming/xampp/htdocs/xampp/Industrial_Project/scss/footer.scss */
+
+footer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 #copyright p {
   text-align: center;
+    font-family: sans-serif;
+    color: white;
+    font-size: 0.6em;
 }
 
 /*# sourceMappingURL=../styles/footer.map */
