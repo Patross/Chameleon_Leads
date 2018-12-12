@@ -24,19 +24,8 @@
                     $query = $conn->query("SELECT first_name FROM users where id = {$row['user_id']}");
                     $result = $query->fetch(PDO::FETCH_ASSOC);
 
-                    echo $result["first_name"];
-            }
-            if(!empty($row['question'])&&!empty($row['answer'])&&$_SESSION['u_email']!="admin@admin.admin"){
-                echo'
-                <p class="question">Question: '.$row["question"].'</p>
-                <p class="answer">Answer: '.$row["answer"].'</p>
-                <p class="user">';
-                $query = $conn->query("SELECT first_name FROM users where id = {$row['user_id']}");
-                
-                $result = $query->fetch(PDO::FETCH_ASSOC);
-                
-                echo $result["first_name"];
-            }
+                    echo $result["first_name"].'</p>';
+                }
             }else if(!empty($row['question'])&&!empty($row['answer'])){
                 echo'
                 <p class="question">Question: '.$row["question"].'</p>
@@ -46,10 +35,20 @@
                 
                 $result = $query->fetch(PDO::FETCH_ASSOC);
                 
-                echo $result["first_name"];
+                echo $result["first_name"].'</p>';
             }
-        }
+    }else{
+        echo'
+            <p class="question">Question: '.$row["question"].'</p>
+            <p class="answer">Answer: '.$row["answer"].'</p>
+            <p class="user">';
+            $query = $conn->query("SELECT first_name FROM users where id = {$row['user_id']}");
+            
+            $result = $query->fetch(PDO::FETCH_ASSOC);
+            
+            echo $result["first_name"];
     }
+}
     if(!empty($_SESSION['u_email'])){
         if($_SESSION['u_email']!="admin@admin.admin"){
             echo'
