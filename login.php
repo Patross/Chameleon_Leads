@@ -15,10 +15,10 @@
 <main>
     <form id="loginForm" action="includes/login.inc.php" method="POST">
 
-        <input type="email" name="email" placeholder="email">
-        <input type="password" name="password" placeholder="password">
-        <a href="register.php">Create an Account</a>
-        <button type="submit" name="submit">submit</button>
+        <input class="formItem" id="emailForm" type="email" name="email" placeholder="Email">
+        <input class="formItem" id="passForm" type="password" name="password" placeholder="Password">
+        <a class="formItem" id="createAcc" href="register.php">Create an Account</a>
+        <button class="formItem" id="submitForm" type="submit" name="submit">submit</button>
 
     </form>
     <?php
