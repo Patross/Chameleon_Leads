@@ -10,7 +10,7 @@
 ?>
 <main>
     <form action="includes/adminPanel.inc.php" method="POST" enctype="multipart/form-data">
-         <input type="text" name="ItemName" placeholder="Item Name">
+        <input type="text" name="ItemName" placeholder="Item Name">
         <input type="text" name="Description" placeholder="Description"> 
         <input type="number" name="price" placeholder="price"/>
         <input type="file" name="Image" multiple>

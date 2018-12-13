@@ -54,6 +54,13 @@ $db_pass = "root";
     FOREIGN KEY (user_id) REFERENCES users(id),
     answer varchar(255) not null
     );");
+
+$conn->query("CREATE TABLE IF NOT EXISTS gallery(
+    id int not null primary key auto_increment,
+    image_path varchar(255) not null,
+    caption varchar(255),
+    verified boolean not null
+    );");
 }
 catch(PDOException $e)
 {
