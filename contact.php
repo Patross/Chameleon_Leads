@@ -49,19 +49,20 @@
             echo $result["first_name"];
     }
 }
-    if(!empty($_SESSION['u_email'])){
-        if($_SESSION['u_email']!="admin@admin.admin"){
-            echo'
+?>
+    <?php if(!empty($_SESSION['u_email']) && $_SESSION['u_email']!="admin@admin.admin"):?>
+
                 <form id="formAddQuestion" action="includes/qa.inc.php" method="POST">
                     <input name="question" type="text" placeholder="Question"></input>
                     <input type="submit" name="submit" class="addQuestion"></input>
                 </form>
-            ';
-        }
-    }
 
-    
-?>
+                <form id="formSendEmail" action="includes/sendEmail.inc.php" method="POST">
+                    <input type="text" name="subject">
+                    <input type="text" name="message">
+                    <input type="submit" name="submit">
+                </form>
+    <?php endif; ?>
 </main>
 <?php
     require_once("includes/footer.php")
