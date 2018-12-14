@@ -11,13 +11,13 @@
 ?>
 
     <main>
-        <form id="register" action="includes/register.inc.php" method="POST">
+        <form id="loginForm" action="includes/register.inc.php" method="POST">
 
-            <input type="text" name="firstname" placeholder="first name">
-            <input type="text" name="lastname" placeholder="last name">
-            <input type="text" name="email" placeholder="email">
-            <input type="password" name="password" placeholder="password">
-            <input type="password" name="confirmPassword" placeholder="confirm password">
+            <input id="forename" class="formItem" type="text" name="firstname" placeholder="First name">
+            <input id="surname" class="formItem" type="text" name="lastname" placeholder="Last name">
+            <input id="emailForm" class="formItem" type="text" name="email" placeholder="Email">
+            <input id="passForm" class="formItem" type="password" name="password" placeholder="Password">
+            <input id="passForm" class="formItem" type="password" name="confirmPassword" placeholder="Confirm Password">
 
             <!--<div class="g-recaptcha" data-sitekey="6LelckQUAAAAAOEkeZHXgD2Gb_LSAHDpMbS3s1Qf"></div>-->
             <button type="submit" name="submit"  id="bt">submit</button>
