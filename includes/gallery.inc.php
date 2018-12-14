@@ -18,7 +18,7 @@
     // caption varchar(255),
     // verified boolean not null
     
-    $filePath = "img/gallery/".$name;
+    $filePath = "img/gallery/".$name.".".$ext;
     $conn->query("insert into gallery(image_path,caption,verified) values('{$filePath}','{$_POST["caption"]}',false)");
 
 
@@ -36,7 +36,7 @@
         if($check !== false) {
             // echo "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
-            move_uploaded_file($_FILES["Image"]["tmp_name"], "../img/gallery/".$name);
+            move_uploaded_file($_FILES["Image"]["tmp_name"], "../img/gallery/".$name.".".$ext);
         } else {
             // echo "File is not an image.";
             $uploadOk = 0;
