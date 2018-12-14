@@ -15,7 +15,7 @@
 <main>
     <form id="loginForm" action="includes/login.inc.php" method="POST">
 
-        <input class="formItem" class="emailForm" type="email" name="email" placeholder="Email">
+        <input class="formItem" id="emailForm" type="email" name="email" placeholder="Email">
         <input class="formItem" id="passForm" type="password" name="password" placeholder="Password">
         <button class="formItem" id="submitForm" type="submit" name="submit">Submit</button>
         <a class="formItem" id="createAcc" href="register.php">Create an Account</a>

@@ -95,65 +95,65 @@ footer{
     display: block;
     text-align: center;
     margin: 0 auto;
-    background-color: blue;
     margin-top: 1vh;
     margin-bottom: 1vh;
     font-family: sans-serif;
-    color: black;
+    color: rgba(255, 255, 255, 0.8);
     border: none;
     transition: 0.15s linear;
+    font-size: 0.8em;
 }
 
 .formItem:hover{
-    box-shadow: 4px 4px 5px #000000;
+    box-shadow: 3px 3px 0px #000000;
 }
 
 .formItem::placeholder{
-    color: black;
+    color: rgba(255, 255, 255, 0.8);
     font-family: sans-serif;
 
 }
 
 #emailForm{
-    width: 40%;
+    width: 30%;
     padding: 1vh 1vw;
-    background-color: rgba(256, 256, 256, 1);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 2px;
-    color: black;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 #passForm{
-    width: 40%;
+    width: 30%;
     padding: 1vh 1vw;
-    background-color: rgba(256, 256, 256, 1);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 2px;
-    color: black;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 #createAcc{
     width: 20%;
     padding: 1vh 1vw;
-    background-color: rgba(256, 256, 256, 1);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0px;
-    color: black;
+    color: rgba(255, 255, 255, 0.8);
     transition: 0.15s linear;
     border-radius: 2px;
-}
-
-#createAcc:hover{
-    box-shadow: 4px 4px 5px #000000;
 }
 
 #submitForm{
     width: 10%;
     padding: 1vh 1vw;
-    background-color: rgba(256, 256, 256, 1);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 0px;
-    color: black;
+    color: rgba(255, 255, 255, 0.8);
     transition: 0.15s linear;
     border-radius: 2px;
 }
 
-#submitForm:hover{
-    box-shadow: 4px 4px 5px #000000;
+#forename, #surname{
+    width: 20%;
+    padding: 1vh 1vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.8);
 }
