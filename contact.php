@@ -58,8 +58,8 @@
                 </form>
 
                 <form id="formSendEmail" action="includes/sendEmail.inc.php" method="POST">
-                    <input type="text" name="subject">
-                    <input type="text" name="message">
+                    <input type="text" name="subject" placeholder="subject">
+                    <input type="text" name="message" placeholder="message">
                     <input type="submit" name="submit">
                 </form>
     <?php endif; ?>

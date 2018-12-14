@@ -3,7 +3,7 @@ session_start();
 if(isset($_POST["submit"])){
     if(!empty($_POST["message"]) && !empty($_POST["subject"])){
         $from = $_SESSION["u_email"];
-        $subject = $_POST["subject"];
+        $subject = "Chameleon Leads Enquiry: ".$_POST["subject"];
         $message = $_POST["message"];
         $to = "contactpatross@gmail.com";
         $headers = "From: {$from}" . "\r\n" .
