@@ -157,3 +157,16 @@ footer{
     border-radius: 2px;
     color: rgba(255, 255, 255, 0.8);
 }
+.imgGallery{
+    margin-top: 5vh;
+    margin-left: 3vw;
+    width: 10vw;
+}
+#formGallery{
+    all: unset;
+    display: block;
+    background-color: red;
+    width: 100%;
+    margin-top: 5vh;
+    text-align: center;
+}
