@@ -20,7 +20,7 @@
             <input id="passForm" class="formItem" type="password" name="confirmPassword" placeholder="Confirm Password">
 
             <!--<div class="g-recaptcha" data-sitekey="6LelckQUAAAAAOEkeZHXgD2Gb_LSAHDpMbS3s1Qf"></div>-->
-            <button type="submit" name="submit"  id="bt">submit</button>
+            <button type="submit" name="submit" class="formItem" id="bt">Submit</button>
         </form>
         <?php
             if(isset($_GET['register'])){
