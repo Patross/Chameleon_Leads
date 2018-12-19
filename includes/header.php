@@ -79,6 +79,10 @@
                     }
                 }
             ?>
+            <!-- foreach or for through all shopping cart intl_get_error_message
+            times the amount by value
+            add together
+            print result -->
             <p class="shopTotal">Total Price = </p>
             <a class="checkoutLink" href="checkout.php">Check Out</a>
         </div>
