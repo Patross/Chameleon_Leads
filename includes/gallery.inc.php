@@ -18,7 +18,9 @@
     // caption varchar(255),
     // verified boolean not null
     
-    $id = $conn->query("SELECT id FROM gallery ORDER BY id DESC LIMIT 1");
+    $query = $conn->query("SELECT id FROM gallery ORDER BY id DESC LIMIT 1");
+    $result = $query->fetch(PDO::FETCH_ASSOC);
+    $id = ++$result["id"];
     $filePath = "img/gallery/".$id.".".$ext;
     $conn->query("insert into gallery(image_path,caption,verified) values('{$filePath}','{$_POST["caption"]}',false)");
 
