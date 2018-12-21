@@ -1,6 +1,4 @@
 <?php
- require_once( "../PatrossPHP\PatrossPHP\PatrossPHP\PatrossPHP.php");
-
     require_once("dbh.inc.php");
     
     
