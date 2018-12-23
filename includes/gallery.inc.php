@@ -41,8 +41,10 @@
             // echo "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
             move_uploaded_file($_FILES["Image"]["tmp_name"], "../img/gallery/".$id.".".$ext);
+            header("Location: ../gallery.php");
         } else {
             // echo "File is not an image.";
             $uploadOk = 0;
+            header("Location: ../gallery.php");
         }
     }

@@ -12,7 +12,7 @@ if (!isset($_POST['submit'])) {
 
         $conn->query("DELETE FROM `gallery` WHERE `id` = $image");
 
-        $file_pattern = "../img/gallery/{$image}.*" // Assuming your files are named like profiles/bb-x62.foo, profiles/bb-x62.bar, etc.
+        $file_pattern = "../img/gallery/{$image}.*"; // Assuming your files are named like profiles/bb-x62.foo, profiles/bb-x62.bar, etc.
         array_map( "unlink", glob( $file_pattern ) );
         header("Location: ../gallery.php");
     }
