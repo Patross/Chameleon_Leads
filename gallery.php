@@ -15,7 +15,8 @@
                 </form>
                 <form action="includes/verifyGallery.inc.php" method="POST">
                     <input type="text" name="imageid" hidden=hidden value="'.$row['id'].'"></input>
-                    <input type="submit" name"submit" value="Verify Image"></input>';
+                    <input type="submit" name"submit" value="Verify Image"></input>
+                </form>';
             }
             else{
                 echo'

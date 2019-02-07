@@ -36,7 +36,7 @@ ini_set('display_startup_errors', 0);
             <?php endif; ?>
             <?php if (isset($_SESSION['u_id'])):?>
             <form action="includes/logout.inc.php" method="post">
-                <button type="submit" name="submit">Logout</button>
+                <button id="btnlogout" type="submit" name="submit">Logout</button>
                 <i id="btnShop" class="fas  fa-shopping-basket"></i>
             </form>
             <?php endif; ?>

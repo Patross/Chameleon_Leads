@@ -13,10 +13,12 @@ header{
 nav{
     background-color: rgba(0, 0, 0, 0.2);
     text-align: right;
-    padding: 1.5vh 1vw;
+     padding: 1.5vh 0vw; 
     width: 100%;
+    overflow: none;
 }
 
+/* shopping cart */
 i{
     font-size: 1.2em;
     cursor: pointer;
@@ -32,6 +34,18 @@ i:hover{
 }
 
 nav a{
+    font-size: 0.8em;
+    cursor: pointer;
+    opacity: 0.8;
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5vw;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+#btnlogout{
     font-size: 0.8em;
     cursor: pointer;
     opacity: 0.8;
