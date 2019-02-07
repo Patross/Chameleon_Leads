@@ -53,15 +53,15 @@
     <?php if(!empty($_SESSION['u_email']) && $_SESSION['u_email']!="admin@admin.admin"):?>
 
                 <form id="formAddQuestion" action="includes/qa.inc.php" method="POST">
-                    <input name="question" type="text" placeholder="Question"></input>
-                    <input type="submit" name="submit" class="addQuestion"></input>
+                    <textarea placeholder="Question" id="formQuestion" name="question"  rows="10" coloumns="50" form="formAddQuestion"></textarea>
+                    <input class="formItem" id="formQuestionSub" type="submit" name="submit" class="addQuestion"></input>
                 </form>
 
-                <form id="formSendEmail" action="includes/sendEmail.inc.php" method="POST">
+                <!-- <form id="formSendEmail" action="includes/sendEmail.inc.php" method="POST">
                     <input type="text" name="subject" placeholder="subject">
                     <input type="text" name="message" placeholder="message">
                     <input type="submit" name="submit">
-                </form>
+                </form> -->
     <?php endif; ?>
 </main>
 <?php
