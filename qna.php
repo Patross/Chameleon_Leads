@@ -37,7 +37,7 @@
                 
                 echo $result["first_name"].'</p>';
             }
-    }else{
+    }else if(!empty($row['question'])&&!empty($row['answer'])){
         echo'
             <p class="question">Question: '.$row["question"].'</p>
             <p class="answer">Answer: '.$row["answer"].'</p>
