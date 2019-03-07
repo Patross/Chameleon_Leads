@@ -14,8 +14,13 @@
                     <input type="submit" name="submit" value="Remove Image"/>
                 </form>
                 <form action="includes/verifyGallery.inc.php" method="POST">
-                    <input type="text" name="imageid" hidden=hidden value="'.$row['id'].'"></input>
-                    <input type="submit" name="submit" value="Verify Image"></input>
+                <input type="text" name="imageid" hidden=hidden value="'.$row['id'].'"></input>
+                <input type="submit" name="submit" value="Verify Image"></input>
+                </form>
+                <form action="includes/editGallery.inc.php" method="POST">
+                    <input type="text" name="imageid" hidden=hidden value="'.$row['id'].'"/>
+                    <input type="text" name="caption" value="'.$row['caption'].'"/>
+                    <input type="submit" name="submit" value="Edit Caption"/>
                 </form>';
             }
             else{
@@ -24,6 +29,10 @@
                 <form action="includes/removegallery.inc.php" method="POST">
                     <input type="text" name="imageid" hidden=hidden value="'.$row['id'].'"/>
                     <input type="submit" name="submit" value="Remove Image"/>
+                </form>
+                <form action="includes/disableGallery.inc.php" method="POST">
+                    <input type="text" name="imageid" hidden=hidden value="'.$row['id'].'"></input>
+                    <input type="submit" name="submit" value="Disable Image"></input>
                 </form>';
             }
         }
@@ -33,7 +42,10 @@
         foreach($sql->fetchAll(PDO::FETCH_ASSOC) as $row){
             if($row["verified"]==1){
                 echo'
-                <img src="'.$row['image_path'].'" alt="GalleryImage" class="imgGallery">';
+                <figure>
+                    <img src="'.$row['image_path'].'" alt="GalleryImage" class="imgGallery">
+                    <figcaption>'.$row[caption].'</figcaption>
+                </figure>';
             }
         }
     }

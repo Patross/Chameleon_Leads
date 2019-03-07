@@ -171,6 +171,9 @@ footer{
     margin-top: 5vh;
     text-align: center;
 }
+figcaption{
+    margin-left: 3vw;
+}
 
 #bt{
     width: 20%;
