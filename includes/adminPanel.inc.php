@@ -14,7 +14,7 @@
     $ext = end((explode(".", $name))); # extra () to prevent notice
     
     $filePath = "img/products/".$productid.".".$ext;
-    $conn->query("insert into images(image_path,product_id) values('{$filePath}',{$productid})");
+    $conn->query("INSERT INTO images(image_path,product_id) VALUES('{$filePath}',{$productid})");
 
 
     $path = "../img/products/";

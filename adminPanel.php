@@ -9,15 +9,14 @@
 
 ?>
 <main>
-    <form action="includes/adminPanel.inc.php" method="POST" enctype="multipart/form-data">
-        <input type="text" name="ItemName" placeholder="Item Name">
-        <input type="text" name="Description" placeholder="Description"> 
-        <input type="number" name="price" placeholder="price"/>
-        <input type="file" name="Image" multiple>
-        <input type="submit" name="submit">
+    <form id="formAdminProduct" action="includes/adminPanel.inc.php" method="POST" enctype="multipart/form-data">
+        <input id="formAdminName" type="text" name="ItemName" placeholder="Item Name"/>
+        <input id="formAdminDesc" type="text" name="Description" placeholder="Description"/> 
+        <input id="formAdminPrice" type="number" name="price" placeholder="price"/>
+        <input id="formAdminImage" type="file" name="Image" multiple/>
+        <input id="formAdminSub" type="submit" name="submit"/>
     </form>
 </main>
 <?php
     require_once("includes/footer.php")
-    
 ?>
