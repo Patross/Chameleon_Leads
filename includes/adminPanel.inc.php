@@ -11,7 +11,11 @@
     $fileName = $_POST['ItemName'];
     
     $name = $_FILES["Image"]["name"];
-    $ext = end((explode(".", $name))); # extra () to prevent notice
+    // $ext = end((explode(".", $name))); # extra () to prevent notice
+
+    $tmp = explode('.', $name);
+    $ext = end($tmp);
+
     
     $filePath = "img/products/".$productid.".".$ext;
     $conn->query("INSERT INTO images(image_path,product_id) VALUES('{$filePath}',{$productid})");
