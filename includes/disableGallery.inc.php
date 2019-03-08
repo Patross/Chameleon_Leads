@@ -9,7 +9,7 @@ if (!isset($_POST['submit'])) {
     if(empty($galleryID)){
         header("Location: ../gallery.php");
     } else {
-        $conn->query("UPDATE `gallery` SET `verified` = '1' WHERE `id` = $galleryID;");
+        $conn->query("UPDATE `gallery` SET `verified` = '0' WHERE `id` = $galleryID;");
         header("Location: ../gallery.php");
     }
 }
