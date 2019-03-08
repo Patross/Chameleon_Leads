@@ -12,4 +12,4 @@ if (!isset($_POST['submit'])) {
         $conn->query("UPDATE `qa` SET `answer` = '$answer' WHERE `question` = '$question';");
         header("Location: ../qna.php");
     }
-}
+}cxz
