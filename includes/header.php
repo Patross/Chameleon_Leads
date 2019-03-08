@@ -47,46 +47,46 @@ ini_set('display_startup_errors', 0);
 
 
         </nav>
-        <div id="shopping" class="hidden">
-            <h1>Shoppin Cart:</h1>
+        <!-- <div id="shopping" class="hidden">
+            <h1>Shoppin Cart:</h1> -->
             <?php
-                if(isset($_SESSION['u_id'])){
+                // if(isset($_SESSION['u_id'])){
 
-                    $sql = $conn->query('select * from shopping_cart where user_id='.$_SESSION['u_id']);
-                    foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $rowProducts) {
+                //     $sql = $conn->query('select * from shopping_cart where user_id='.$_SESSION['u_id']);
+                //     foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $rowProducts) {
 
-                $sql = $conn->query('select * from products where id='.$rowProducts['product_id']);
-                //DISPLAY ALL SHOPPING CART ITEMS
-                foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
-                    echo '
-                    <img class="shopImgs" src="';
+                // $sql = $conn->query('select * from products where id='.$rowProducts['product_id']);
+                // //DISPLAY ALL SHOPPING CART ITEMS
+                // foreach ($sql->fetchAll(PDO::FETCH_ASSOC) as $row) {
+                //     echo '
+                //     <img class="shopImgs" src="';
                     
-                    $query = $conn->query("SELECT image_path FROM images where product_id = {$row['id']}");
+                //     $query = $conn->query("SELECT image_path FROM images where product_id = {$row['id']}");
 
-                    $result = $query->fetch(PDO::FETCH_ASSOC);
+                //     $result = $query->fetch(PDO::FETCH_ASSOC);
 
-                    echo $result["image_path"];
+                //     echo $result["image_path"];
                     
-                    echo '" alt="lead">
-                    <p class="shopNames">Product Name: '.$row['name'].'</p>
-                    <p class="shopDesc">Description: '.$row['description'].'</p>
-                    <p>Amount: '.$rowProducts["amount"].'</p>
-                    <form id="formHolder" action="includes/deleteFromCart.inc.php" method="POST">
-                        <input class="shopRemove" type="submit" name="submit" value="Remove from cart"></input>
-                        <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden> </input>
+                //     echo '" alt="lead">
+                //     <p class="shopNames">Product Name: '.$row['name'].'</p>
+                //     <p class="shopDesc">Description: '.$row['description'].'</p>
+                //     <p>Amount: '.$rowProducts["amount"].'</p>
+                //     <form id="formHolder" action="includes/deleteFromCart.inc.php" method="POST">
+                //         <input class="shopRemove" type="submit" name="submit" value="Remove from cart"></input>
+                //         <input type="text" name="itemid" value="'.$row['id'].'" hidden=hidden> </input>
 
-                            </form>
-                            </button>
-                            <p class="shopPrice">Price = '.$row['price'].'</p>';
-                        }   
-                    }
-                }
+                //             </form>
+                //             </button>
+                //             <p class="shopPrice">Price = '.$row['price'].'</p>';
+                //         }   
+                //     }
+                // }
             ?>
             <!-- foreach or for through all shopping cart intl_get_error_message
             times the amount by value
             add together
             print result -->
-            <p class="shopTotal">Total Price = </p>
+            <!-- <p class="shopTotal">Total Price = </p>
             <a class="checkoutLink" href="checkout.php">Check Out</a>
-        </div>
+        </div> -->
     </header>

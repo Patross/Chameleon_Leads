@@ -48,10 +48,10 @@
                                 <input type="text" name="itemid" value="'.$row["id"].'" hidden=hidden />
                                 </form>';
                             }else{
-                                echo'
-                                <form action="login.php" method="POST">
-                                <button name="submit" class="AddToCart">Add to cart</button>
-                                </form>';
+                                // echo'
+                                // <form action="login.php" method="POST">
+                                // <button name="submit" class="AddToCart">Add to cart</button>
+                                // </form>';
                             }
                                     if(isset($_SESSION['u_email']) && $_SESSION['u_email'] == "admin@admin.admin"){
                                         echo '<form action="includes/deleteProduct.inc.php" method="POST">
