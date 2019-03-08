@@ -51,9 +51,9 @@
     }
 ?>
     <form id="formGallery" action="includes/gallery.inc.php" method="POST" enctype="multipart/form-data">
-        <input type="file" name="Image" multiple>
-        <input type="text" name="caption" placeholder="Caption">
-        <input type="submit" name="submit" value="Add Image">
+        <input type="file" name="Image" id="formGalleryImage" >
+        <input type="text" name="caption" id="formGalleryCaption" placeholder="Caption" maxlength="125">
+        <input type="submit" name="submit" id="formGallerySub" value="Add Image">
     </form>
 </main>
 <?php    

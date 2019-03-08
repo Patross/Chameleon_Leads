@@ -25,7 +25,7 @@ ini_set('display_startup_errors', 0);
 <body>
     <header>
         <nav>
-           <a><img src="img/logo.png"></a>
+           <a href="index.php"><img src="img/logo.png"></a>
             <a href="index.php">Home</a>
             <a href="products.php">Products</a>
             <a href="gallery.php">Gallery</a>
